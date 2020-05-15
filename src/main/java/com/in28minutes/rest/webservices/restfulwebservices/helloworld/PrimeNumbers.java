@@ -78,22 +78,4 @@ public class PrimeNumbers {
 		
 		return true;
 	}
-	
-	public static boolean isPrime5(int number) {
-		if (number == 2 || number == 3) {
-			return true;
-		}
-		
-		if (number % 2 == 0) {
-			return false;
-		}
-		
-		Double sqrt = Math.sqrt(number);
-		for (int i = 2; i <= sqrt; i += 2) {
-			if (number % i == 0) {
-				return false;
-			}
-		}
-		return true;
-	}
 }

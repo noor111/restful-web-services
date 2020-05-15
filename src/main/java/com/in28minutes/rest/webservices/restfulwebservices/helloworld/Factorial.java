@@ -41,12 +41,10 @@ public class Factorial {
 		return number * factorialWithRecursion4(number - 1);
 	}
 	
-	public static int factorialWithRecursion5(int number) {
-		
+	public static long factorialWithRecursion5(long number) {
 		if (number == 0) {
-			return 0;
+			return 1;
 		}
-		
 		return number * factorialWithRecursion5(number - 1);
 	}
 	
@@ -82,15 +80,14 @@ public class Factorial {
 		return result;
 	}
 	
-	public static int factorialWithoutRecursion4(int number) {
-		
-		int result = 1;
+	public static long factorialWithoutRecursion4(long number) {
+		long result = 1;
 		
 		while (number > 0) {
 			result = result * number;
 			number--;
 		}
-		return result;		
+		return result;
 	}
 
 }

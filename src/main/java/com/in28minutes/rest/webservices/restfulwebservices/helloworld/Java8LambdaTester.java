@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.function.Predicate;
 
 import com.in28minutes.rest.webservices.restfulwebservices.user.User;
 
@@ -67,24 +66,12 @@ public class Java8LambdaTester {
 		
 		for (User user : users) {
 			System.out.println(user.getName());
-		}	
-		
+		}
 		
 	}	
 	
 	public int operate(int a, int b, MathOperation functionMathOperation) {
 		return functionMathOperation.operation(a, b);
-	}
-	
-	public boolean testPredicateOperation(int theNumber) {
-		
-		System.out.println("===== Predicate ====");
-		
-		Predicate<Integer> andTest = i -> (i > 5 && i < 10);
-		
-		System.out.println(andTest.test(theNumber));
-		
-		return andTest.test(theNumber);
 	}
 
 }

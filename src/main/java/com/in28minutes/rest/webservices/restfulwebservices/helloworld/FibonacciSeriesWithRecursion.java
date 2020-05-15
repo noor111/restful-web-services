@@ -69,33 +69,5 @@ public class FibonacciSeriesWithRecursion {
 			fibonacciWithRecursion5(count - 1);
 		}
 	}
-	
-	public void fibonacciWithRecursion6(int count) {
-		
-		if (count > 0) {
-			
-			n3 = n1 + n2;
-			n1 = n2;
-			n2 = n3;
-			
-			System.out.println("===> Number " + count + " is " + n3);
-			
-			fibonacciWithRecursion6(count - 1);
-		}
-	}
-	
-	public void fibonacciWithRecursion7(int count) {
-		
-		if (count > 0) {
-			
-			n3 = n1 + n2;
-			n1 = n2;
-			n2 = n3;
-			
-			System.out.println("===> Number " + count + " is " + n3);
-			
-			fibonacciWithRecursion7(count - 1);
-		}
-	}
 
 }

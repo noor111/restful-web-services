@@ -11,7 +11,6 @@ public class StreamExamples {
 	public static List<String> streamfilterExample(List<String> playWords) {	
 		System.out.println("substring of confusing: " + new String("confusing").substring(0, 3));
 		List<String> filtered = playWords.stream().filter(playWord -> !playWord.substring(0, 3).equalsIgnoreCase("con")).collect(Collectors.toList());
-		
 		return filtered;
 	}
 	
@@ -38,14 +37,6 @@ public class StreamExamples {
 		Integer latestEmpId = integers.stream()
 				.max(Integer::compare).get();
 		return latestEmpId;
-	}
-	
-	public static List<Double> streamPipeline2(List<ImageSensor> imageSensors) {
-		return imageSensors.stream()
-				.map(is -> is.getElevation())				
-				.sorted((is1, is2) -> is1.compareTo(is2))
-				.peek(System.out::println)
-				.collect(Collectors.toList());
 	}
 	
 	/*

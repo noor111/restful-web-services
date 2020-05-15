@@ -58,20 +58,6 @@ public class FibonacciSeries {
 		}		
 	}
 	
-	public void fibonacciWithoutRecursion9(int maxNumber) {
-		for (int i = 0; i < maxNumber; i++) {
-			int num = getFibonacci(i);
-			System.out.println("Number " + i + " is " + num);
-		}
-	}
-	
-	public void fibonacciWithoutRecursion10(int maxNumber) {
-		for (int i = 0; i < maxNumber; i++) {
-			int num = getFibonacci10(i);
-			System.out.println("Number " + i + " i " + num);
-		}
-	}
-	
 	private int getFibonacci(int currentNum) {
 		if (currentNum == 0) {
 			return 0;
@@ -238,48 +224,6 @@ public class FibonacciSeries {
 		int third = 1;
 		
 		for (int i = 2; i < currentNum; i++) {
-			third = first + second;
-			first = second;
-			second = third;
-		}
-		return third;
-	}
-	
-	private int getFibonacci9(int currentNum) {
-		
-		if (currentNum == 0) {
-			return 0;			
-		}
-		if (currentNum == 1) {
-			return 1;
-		}
-		
-		int first = 0;
-		int second = 1;
-		int third = 1;
-		
-		for (int i = 2; i < currentNum; i++) {
-			third = first + second;
-			first = second;
-			second = third;		
-		}		
-		return third;		
-	}
-	
-	private int getFibonacci10(int currentNum) {
-		if (currentNum == 0) {
-			return 0;
-		}
-		
-		if (currentNum == 1) {
-			return 1;	
-		}
-		
-		int first = 0;
-		int second = 1;
-		int third = 1;
-		
-		for (int i = 1; i < currentNum; i++) {
 			third = first + second;
 			first = second;
 			second = third;
