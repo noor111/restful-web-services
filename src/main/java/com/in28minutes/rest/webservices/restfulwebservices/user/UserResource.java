@@ -11,8 +11,6 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,16 +37,13 @@ public class UserResource {
 	}
 	
 	@GetMapping("/users/{id}")
-	public Resource<User> retrieveUser(@PathVariable int id) {
+	public User retrieveUser(@PathVariable int id) {
 		User user = userDaoService.findOne(id);
 		if (user == null) {
 			throw new UserNotFoundException("id-"+id);
 		}
-		Resource<User> resource = new Resource<User>(user);
-		ControllerLinkBuilder linkTo = ControllerLinkBuilder.linkTo(ControllerLinkBuilder.methodOn(this.getClass()).retrieveAllUsers());
-		resource.add(linkTo.withRel("all-users"));
 		
-		return resource;
+		return user;
 	}
 	
 	@PostMapping("/users")

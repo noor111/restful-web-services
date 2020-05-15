@@ -17,13 +17,26 @@ public class CountDuplicatesInList {
 		List<String> list = new ArrayList<String>();
 		list.add("a");
 		list.add("b");
+		list.add("g");
 		list.add("c");
+		list.add("f");
 		list.add("d");
 		list.add("b");
 		list.add("c");
 		list.add("a");
+		list.add("f");
+		list.add("g");
+		list.add("p");
 		list.add("a");
 		list.add("a");
+		list.add("p");
+		list.add("p");
+		list.add("s");
+		list.add("m");
+		list.add("g");
+		list.add("f");
+		list.add("m");
+		list.add("p");
 
 		System.out.println("\nExample 1 - Count 'a' with frequency");
 		System.out.println("a : " + Collections.frequency(list, "a"));
